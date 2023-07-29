@@ -407,6 +407,10 @@
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    background-image: url(../images/Project_resources/assets/Trumpet.png);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .content-img3 img {
@@ -927,9 +931,106 @@ footer {
 
 
 
+@media (min-width: 900px) and (max-width:1200px) {
+    .section1-h2 {
+        text-align: center;
+    }
+
+    .card-common p {
+        width: 70%;
+    }
 
 
-@media (min-width: 630px) and (max-width:1000px) {
+
+    .section2-content-common, .content3  {
+        height: 350px;
+    }
+
+    .content-img3 {
+        background-size: contain;
+    }
+
+    .content-text::after {
+        display: none;
+    }
+
+    .section2-content1 {
+        padding: 20px;
+        margin: 0;
+    }
+
+    .content-img1, .content-img2 {
+        display: flex;
+        width: 60%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .content-img1::after {
+        width: 120px;
+        height: 120px;
+        top: 0px;
+        right: 10px;
+    }
+
+    .content-img1 img {
+        width: 300px;
+        height: 180px;
+        align-self: center;
+
+    }
+
+    .content-img2::after {
+        width: 220px;
+        height: 220px;
+        top: 40px;
+        left: 20px;
+    }
+
+    .section2-content2 .content-text h1 {
+        width: 100%;
+    }
+
+    .content-img2 img {
+        width: 270px;
+        height: 240px;
+        align-self: center;
+    }
+
+
+    .pricing-cards {
+        width: 90%;
+    }
+
+    .email-number {
+        display: block;
+    }
+
+    .company-email {
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        width: 80%;
+        gap: 10px;
+    }
+
+    .agree-text p {
+        font-size: 13px;
+    }
+
+    .agree-text #agree-check {
+        padding: 10px;
+    }
+
+    .section2 {
+        height: 150vh;
+    }
+
+}
+
+
+@media (min-width: 630px) and (max-width:900px) {
     .nav-bar {
         flex-wrap: wrap;
         box-shadow: 0px 3px 6px var(--universalShadow);
@@ -1003,7 +1104,7 @@ footer {
     }
 
     .section2 {
-        height: 200vh;
+        height: 160vh;
     }
 
 
@@ -1179,7 +1280,7 @@ footer {
     }
 
     .section3 {
-        height: 170vh;
+        height: 130vh;
     }
 
     .pricing-cards {
@@ -1190,7 +1291,10 @@ footer {
 
     .pricing-card {
         width: 500px;
+        gap: 20px;
     }
+
+
 
     .card-heading {
         gap: 0;
@@ -1198,8 +1302,10 @@ footer {
     }
 
     .pro {
-        height: 100%;
+        height: 70%;
         width: 101%;
+        flex-direction: row;
+        padding: 0;
     }
 
     .pro-contents {
@@ -1217,7 +1323,444 @@ footer {
     }
 }
 
-@media (max-width: 630px) {
+@media (min-width: 460px) and (max-width: 630px) {
+    .nav-bar {
+        flex-wrap: wrap;
+        box-shadow: 0px 3px 6px var(--universalShadow);
+        z-index: 10;
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: white;
+    }
+
+    .nav-menu {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        padding: 10px 8%;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 1;
+        height: 180px;
+        left: 0;
+        top: -500vh;
+        box-shadow: 0px 3px 6px var(--universalShadow);
+    }
+
+    .toggle-check:checked ~ .nav-menu {
+        display: flex;
+        left: 0;
+        top: 9.2vh;
+    }
+
+    .nav-menu li {
+        padding: 0 10px;
+        gap: 0;
+    }
+
+    .nav-menu li a {
+        font-weight: bolder;
+        font-size: 12px;
+    }
+
+    .nav-menu li:hover a {
+        border-bottom: none;
+    }
+
+    .btn-toggle {
+        display: block;
+    }
+
+    .background-image-contents {
+        height: 200px;
+    }
+
+    .background-image-contents h1 {
+        font-size: 35px;
+    }
+
+    .background-image-contents p {
+        font-size: 16px;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .background-image-contents button {
+        padding: 25px 0;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .background-image {
+        background-position: bottom ;
+        background-size: 800px;
+        height: 80vh;
+    }
+
+    .section1 {
+        width: 100%;
+        padding: 0 15px;
+        height: 100vh;
+        gap: 10px;
+        margin-top: 40px;
+    }
+
+    .section1-h2 {
+        font-size: 25px;
+        text-align: center;
+        font-weight: lighter;
+        padding: 20px 0;
+    }
+
+    .section1-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-common {
+        padding: 20px 0;
+    }
+
+    
+    .card-common p {
+        width: 96%;
+    }
+
+
+    .card-common::before {
+        top: 10%;
+        
+    }
+
+    .stat-card2 h2 {
+        margin-top: 10px
+    }
+
+    .section2 {
+        height: 205vh;
+    }
+
+
+    .section2-container {
+        width: 85%;
+        height: 95%;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+
+    .section2-content-common {
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .section2-content1 .content-text {
+        order: 1;
+        text-align: left;
+        align-items: flex-start;
+        padding: 30px 20px 0;
+    }
+
+    .section2-content1 {
+        padding: 0;
+    }
+
+    
+
+    .section2-content1 .content-text h1 {
+        font-size: 30px;
+    }
+
+    .section2-content1 .content-text p {
+        font-size: 14px;
+        width: 100%;
+        height: auto;
+    }
+
+    .content-img1, .content-img2 {
+        transform: scale(0.55);
+    }
+
+    .content-img1 {
+        height: 50%;
+        width: 100%;
+        position: relative;
+        transform: scale(0.7);
+    }
+
+    .content-img1 img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .content-img1::after {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 70px;
+        right: -20px;
+        top: -20px;
+    }
+    .content-text::after {
+        display: none;
+    }
+
+    .section2-content2 {
+        padding: 0;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .section2-content2 .content-text {
+        
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .content-img2 {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 50%;
+        
+    }
+
+    .content-img2 img {
+        transform: scale(1);
+    }
+    
+
+    .section2-content2 .content-text {
+        padding: 20px;
+    }
+
+    .section2-content2 .content-text h1 {
+        font-size: 30px;
+        width: 86%;
+    }
+
+    .section2-content2 .content-text p {
+        font-size: 14px;
+        width: 100%;
+        height: auto;
+    }
+
+    .content-img2::after {
+        top: -40px;
+        left: 0;
+        transform: scale(1);
+    }
+
+    .content3 {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .content3 .content-text {
+        padding:  20px;
+        margin: 0 auto;
+        height: 320px;
+        justify-content: center;
+    }
+
+    .content3 .content-text h1 {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .content3 .content-text p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .section2-content3 {
+        width: 100%;
+        
+    }
+
+    .content-img3 img {
+        height: 100%;
+    }
+
+    .content-img3 {
+        width: 90%;
+        margin: 0 auto;
+        height: 200px;
+        background-image: url(../images/Project_resources/assets/Trumpet.png);
+        background-size: contain;
+        background-position: center 30px;
+        background-repeat: no-repeat;
+    }
+
+    
+
+    .section3 {
+        height: 112vh;
+    }   
+
+    .pricing {
+        margin-top: 4em;
+    }
+
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 1em;
+    }
+
+    .pricing-card {
+        width: 90%;
+        flex-direction: row;
+        height: 100%;
+        padding: 8%;
+        padding-bottom: 15%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .pro {
+        
+        width: 100%;
+    }
+
+    .card-heading {
+        align-self: center;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-heading h2 {
+        font-size: 23px;
+    }
+
+    .card-contents span {
+        font-size: 50px;
+    }
+    
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-contents {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .card-contents p {
+        align-items: stretch;
+        font-size: 16px;
+    }
+
+    
+    .pro-contents .p8::before {
+        left: -20px;
+    }
+    
+    .pro-contents .p9::before {
+        left: -20px;
+    }
+
+    .premium-contents .pc::before {
+        left: -20px;
+    }
+    
+    .premium-contents .pd::before {
+        left: -20px;
+    }
+
+    .basic-contents .p3::before {
+        left: -20px;
+    }
+    
+    .basic-contents .p4::before {
+        left: -20px;
+    }
+    
+    .premium-contents p::before, .pro-contents p::before, .basic-contents p::before {
+        left: -20px;
+        position: absolute;
+    }
+    
+    
+
+    .form-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .contact-info {
+        padding: 0;
+        margin: 0;
+        gap: 5px;
+        width: 90%;
+    }
+
+    .contact-info h1 {
+        font-size: 40px;
+    }
+
+    .contact-info h4 {
+        font-size: 16px;
+    }
+
+    .email-number {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .email-number p::before {
+        padding: 11px;
+    }
+
+    .email-number p + p::before {
+        padding: 11px;
+    }   
+
+    .contact-form {
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 15%;
+    }
+
+    .contact-form button {
+        padding: 15px 80px;
+    }
+
+    .agree-text p {
+        font-size: 12px;
+    }
+
+    #agree-check {
+        padding: 10px;
+    }
+
+    .footer-logo h1 {
+        font-size: 25px;
+    }
+
+    .footer-logo p {
+        font-size: 11px;
+    }
+
+    .footer-socials img {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+@media (max-width: 460px) {
 
     .nav-bar {
         flex-wrap: wrap;
@@ -1495,7 +2038,7 @@ footer {
     
 
     .section3 {
-        height: 123vh;
+        height:100vh;
     }   
 
     .pricing {
