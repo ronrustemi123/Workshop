@@ -1600,7 +1600,7 @@ footer {
     
 
     .section3 {
-        height: 112vh;
+        height: 118vh;
     }   
 
     .pricing {
@@ -2038,7 +2038,7 @@ footer {
     
 
     .section3 {
-        height:100vh;
+        height:110vh;
     }   
 
     .pricing {
@@ -2134,6 +2134,7 @@ footer {
     .form-container {
         width: 100%;
         padding: 0 15px;
+        margin-top: 0.5rem;
     }
 
     .contact-info {
