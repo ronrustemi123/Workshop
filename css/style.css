@@ -24,6 +24,11 @@
     --OpenSans: "Open Sans";
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* Navigation Bar */
 
 .nav-bar {
