@@ -143,6 +143,45 @@
                 </div>
             </div>
         </section>
+        <section class="calculator-container">
+            <h1 class="calculator-h1">Calculate how much you’ll pay</h1>
+            <div class="container">
+                <form class="calculator-form" action="#" method="get">
+                    <input class="calc-input" type="number" name="product-quantity" id="product-quantity" placeholder="Products quantity">
+                    <input class="calc-input" type="number" name="orders" id="orders" placeholder="Estimated orders in month">
+                    <div class="select-menu">
+                        <span class="arrow-down"><img style="transform: rotate(180deg);" src="images/Project_resources/assets/Arrow Down.svg" alt=""></span>
+                        <select class="calc-input" name="package" id="package">
+                            <span class="nigga">
+                                <option value="" disabled selected hidden>Choose package</option>
+                                <option value="0">Basic</option>
+                                <option value="25">Professional</option>
+                                <option value="60">Premium</option>
+                            </span>
+                        </select>
+                    </div>
+                    <div class="check-calc">
+                        <input class="calc-check" type="checkbox" name="accounting-check" id="accounting-check">
+                        <label for="accounting-check">Accounting</label>
+                    </div>
+                    
+                    <div class="check-calc">
+                        <input class="calc-check" type="checkbox" name="rental" id="rental">
+                        <label for="rental">Rental of a payment terminal</label>
+                    </div>
+                </form>
+                <div class="calculation-display">
+                    <ul class="calculator-menu">
+                        <li><span>Products</span> <span id="product-calculation"></span> <span class="final-calculation"></span></li>
+                        <li><span>Orders</span> <span id="order-calculation"></span> <span class="final-calculation"></span></li>
+                        <li><span>Package</span> <span id="package-name"></span> <span class="final-calculation"></span></li>
+                        <li><span>Accounting</span> <span id="account-price" class="final-calculation"></span></li>
+                        <li><span>Terminal</span> <span id="rental-price" class="final-calculation"></span></li>
+                    </ul>
+                    <div class="total-price">Total <span id="total-price-span"></span></div>
+                </div>
+            </div>
+        </section>
         <section class="section4">
             <div class="form-container">
                 <div class="contact-info">

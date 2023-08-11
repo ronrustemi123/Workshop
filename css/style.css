@@ -678,6 +678,214 @@ html {
     background-color: var(--universalGreen);
 }
 
+/* Calculator */
+
+
+
+.calculator-container {
+    height: 72vh;
+    background-color: var(--footermainBGcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.calculator-h1 {
+    font-family: var(--Raleway);
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.calculator-container .container {
+    display: flex;
+    width: 55%;
+    height: 270px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.calculation-display {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 10px;
+}
+
+
+.calculator-menu {
+    list-style: none;
+    width: 25vw;
+}
+
+.calculator-menu li {
+    width: 100%;
+    height: 35px;
+    background-color: var(--universalGreen);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 6px var(--universalShadow);
+    display: none;
+}
+
+.calculator-menu li span {
+    padding: 0 20px;
+    font-size: 14px;
+    font-family: var(--OpenSans);
+    color: white;
+    font-weight: 400;
+}
+
+.calculator-menu li .final-calculation {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.calculator-menu li:not(:first-child) {
+    margin-top: 10px;
+}
+
+.total-price {
+    align-self: flex-end;
+    width: 178px;
+    height: 40px;
+    background-color: var(--buttonBlue);
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    font-family: var(--OpenSans);
+    border-radius: 6px;
+    margin-top: 10px;
+    box-shadow: 0px 3px 6px var(--universalShadow);
+    display: none;
+}
+
+.total-price span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+.calc-input {
+    width: 25vw;
+    height: 40px;
+    box-shadow: 0px 3px 6px #08A6E429;
+    border-radius: 6px;
+    border: 2px solid #08a6e496;
+    outline: none;
+}
+
+.calc-input::placeholder, select{
+    font-size: 13px;
+    color: var(--lightParColor);
+    font-family: var(--OpenSans);
+}
+
+.calc-input {
+    padding-left: 10px;
+}
+
+.select-menu {
+    position: relative;
+}
+
+select {
+    appearance: none;
+}
+
+.nigga {
+    border-radius: 10px;
+    background-color: red;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+
+.arrow-down {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -40%);
+    right: 15px;
+    pointer-events: none;
+}
+
+
+
+select option {
+    border: 1px solid var(--cardContentPink);
+    box-shadow: 0px 3px 6px #EB476E29;
+    outline: none;
+    font-family: var(--OpenSans);
+    font-size: 13px;
+    color: black;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-show {
+    display: flex !important;
+}
+
+.calc-check {
+    appearance: none;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    border: 2px solid #95989A99;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+}
+
+.calc-check:checked {
+    background-image: url(../images/Project_resources/assets/Checkmark.svg);
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.calc-check:checked::before {
+    content: "";
+    background-image: url(../images/Icon\ Check.svg);
+    position: absolute;
+    color: black;
+}
+
+.calc-check + label {
+    font-family: var(--OpenSans);
+    color: var(--footerTextColor);
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+select + div {
+    display: flex;
+    align-items: center;
+}
+
+select + div + div {
+    display: flex;
+    align-items: center;
+}
+
+
 
 
 /* Section 4 - Contats */
@@ -685,7 +893,7 @@ html {
 
 .form-container {
     width: 60%;
-    margin: 0 auto;
+    margin: 60px auto;
     display: flex;
     justify-content: space-between;
 }
@@ -1911,7 +2119,57 @@ footer {
         padding: 0;
     }
 
+    /* Calculator */
+
+    .calculator-container {
+        min-height: 100vh;
+        justify-content: flex-start;
+        padding-top: 30px;
+        width: 100%;
+    }
+
+    .calculator-h1 {
+        text-align: center;
+        font-size: 32px;
+        width: 90%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .calc-input {
+        width: 100%;
+    }
+
+    .calculator-form {
+        min-height: 270px;
+        width: 100%;
+    }
+
+    .total-price {
+        align-self: center;
+    }
+
+    .calculation-display {
+        width: 100%;
+    }
+
+    .calculator-menu  {
+        width: 100%;
+    }
     
+
+    .calculator-menu li > span:nth-child(2):not(#account-price):not(#rental-price)  {
+       display: none;
+    }
+
+    .calculator-menu li {
+        margin-top: 10px;
+    }
+
 
     .section2-content1 .content-text h1 {
         font-size: 30px;
@@ -1933,6 +2191,8 @@ footer {
         position: relative;
         transform: scale(0.7);
     }
+
+
 
     .content-img1 img {
         width: 100%;
@@ -2139,7 +2399,7 @@ footer {
     .form-container {
         width: 100%;
         padding: 0 15px;
-        margin-top: 0.5rem;
+        margin-top: 3rem;
     }
 
     .contact-info {
@@ -2202,5 +2462,6 @@ footer {
         height: 23px;
     }
 }
+
 
 
