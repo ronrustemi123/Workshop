@@ -1,13 +1,21 @@
 const link = document.querySelectorAll('#links');
+const navLogo = document.querySelector('.nav-logo');
 
+const section0 = document.querySelector('.background-image')
 const section1 = document.querySelector('.section1');
 const section2 = document.querySelector('.section2');
 const section3 = document.querySelector('.section3');
 const section4 = document.querySelector('.section4');
 
-const phoneNavBar = document.querySelector('.nav-menu')
 
-const checkbox = document.querySelector('#checkbox-toggle')
+
+const checkbox = document.querySelector('#checkbox-toggle');
+
+navLogo.addEventListener('click', function(e) {
+    e.preventDefault();
+    section0.scrollIntoView();
+    checkbox.checked = false;
+})
 
 link[0].addEventListener('click', function (e) {
     e.preventDefault();
@@ -45,9 +53,11 @@ let counter = 0
 function arrowDownFunc(e) {
     counter++;
     if (counter % 2 == 0) {
-        arrowDown.style.transform = 'rotate(180deg)';
+        arrowDown.style.transform = 'rotate(-180deg)';
+        arrowDown.style.transition = '0.1s'
     } else {
         arrowDown.style.transform = 'rotate(0deg)';
+        arrowDown.style.transition = '0.1s'
     }
 }
 
@@ -70,7 +80,6 @@ const rentalCheck = document.querySelector('#rental');
 const totalPriceDisplay = document.querySelector('.container .calculation-display .total-price');
 const totalPrice = document.querySelector('#total-price-span');
 
-let basicCount = 0;
 
 function showPrices(e) {
     const listItem = document.querySelectorAll('.calculator-menu li');
@@ -96,8 +105,6 @@ function showPrices(e) {
         listItem[0].style.display = 'flex'
     } else {
         listItem[0].style.display = 'none';
-        totalPriceDisplay.style.display = 'none';
-
     }
 
     if (orderAmount.value.length > 0) {
@@ -132,7 +139,6 @@ function showPrices(e) {
 
     if (packageOptions.value == 0) {
         let finalPrice = 0
-        basicCount += 1;
 
         totalFinalPrice += finalPrice;
         totalPrice.innerText = '$' + totalFinalPrice;
@@ -140,12 +146,6 @@ function showPrices(e) {
 
         packageName.innerText = 'Basic';
         finalCalc.innerText = '$' + 0
-
-        
-        if(basicCount > 0) {
-            totalPriceDisplay.classList.add('d-show')
-            console.log('arstarst')
-        }
     
 
     } else if (packageOptions.value == 25) {
@@ -195,18 +195,14 @@ function showPrices(e) {
     } else {
         listItem[4].style.display = 'none'
     }
-
     
-
     if(totalFinalPrice == 0) {
         totalPriceDisplay.style.display = 'none'
-        totalPriceDisplay.classList.remove('d-show')
     }
 
-    
-    
 }
 
+const basicOption = packageOptions.value == 0
 
 prodQuantity.addEventListener('keyup', showPrices);
 prodQuantity.addEventListener('change', showPrices);
@@ -216,6 +212,7 @@ orderAmount.addEventListener('change', showPrices);
 
 packageOptions.addEventListener('keyup', showPrices);
 packageOptions.addEventListener('change', showPrices);
+
 
 rentalCheck.addEventListener('change', showPrices);
 accountingCheck.addEventListener('change', showPrices);

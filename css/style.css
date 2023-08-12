@@ -802,7 +802,11 @@ html {
 
 select {
     appearance: none;
+    border: none;
+    outline: none;
 }
+
+
 
 .nigga {
     border-radius: 10px;
@@ -1240,6 +1244,14 @@ footer {
         height: 150vh;
     }
 
+    .calculator-container .container {
+        width: 65%;
+    }
+
+    .calculator-menu {
+        width: 100%;
+    }
+
 }
 
 
@@ -1292,6 +1304,7 @@ footer {
     .btn-toggle {
         display: block;
     }
+
 
 
     .background-image {
@@ -1534,6 +1547,34 @@ footer {
     .contact-form {
         margin-top: 40px;
     }
+
+
+    .calculator-container .container {
+        width: 80%;
+    }
+
+    .calc-input {
+        width: 100%;
+    }
+
+    .calculator-menu {
+        width: 100%;
+    }
+
+    .calculator-menu li {
+        width: 100%;
+    }
+
+    .calculation-display {
+        width: 50%;
+    }
+
+    .calculator-menu li > span:nth-child(2):not(#account-price):not(#rental-price)  {
+        display: block;
+        font-size: 10px;
+        font-weight: bold;
+     }
+
 }
 
 @media (min-width: 460px) and (max-width: 630px) {
@@ -1645,6 +1686,64 @@ footer {
         top: 10%;
         
     }
+
+    /* Calculator */
+
+    .calculator-container {
+        min-height: 100vh;
+        justify-content: flex-start;
+        padding-top: 30px;
+        width: 100%;
+    }
+
+    .calculator-h1 {
+        text-align: center;
+        font-size: 32px;
+        width: 90%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .calculator-form {
+        width: 100%;
+    }
+
+    .calc-input {
+        width: 100%;
+    }
+
+    .calculator-form {
+        min-height: 270px;
+        width: 100%;
+    }
+
+    .total-price {
+        align-self: center;
+    }
+
+    .calculation-display {
+        width: 100%;
+    }
+
+    .calculator-menu  {
+        width: 100%;
+    }
+    
+
+    .calculator-menu li > span:nth-child(2):not(#account-price):not(#rental-price)  {
+       display: block;
+       font-size: 13px;
+       font-weight: bold;
+    }
+
+    .calculator-menu li {
+        margin-top: 10px;
+    }
+
 
     .stat-card2 h2 {
         margin-top: 10px
