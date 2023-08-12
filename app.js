@@ -146,7 +146,7 @@ function showPrices(e) {
 
         packageName.innerText = 'Basic';
         finalCalc.innerText = '$' + 0
-    
+
 
     } else if (packageOptions.value == 25) {
         let finalPrice = 25
@@ -196,13 +196,15 @@ function showPrices(e) {
         listItem[4].style.display = 'none'
     }
     
-    if(totalFinalPrice == 0) {
+
+
+    if(totalFinalPrice == 0 && listItem[2].style.display != 'flex') {
         totalPriceDisplay.style.display = 'none'
     }
 
+
 }
 
-const basicOption = packageOptions.value == 0
 
 prodQuantity.addEventListener('keyup', showPrices);
 prodQuantity.addEventListener('change', showPrices);
