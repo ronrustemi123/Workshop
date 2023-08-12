@@ -219,4 +219,3 @@ packageOptions.addEventListener('change', showPrices);
 rentalCheck.addEventListener('change', showPrices);
 accountingCheck.addEventListener('change', showPrices);
 
-

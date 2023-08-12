@@ -2403,7 +2403,8 @@ footer {
     
 
     .section3 {
-        height:120vh;
+        height:130vh;
+        max-height:130vh;
     }   
 
     .pricing {
