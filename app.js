@@ -1,41 +1,39 @@
 const link = document.querySelectorAll('#links');
 const navLogo = document.querySelector('.nav-logo');
 
-const section0 = document.querySelector('.background-image')
-const section1 = document.querySelector('.section1');
-const section2 = document.querySelector('.section2');
-const section3 = document.querySelector('.section3');
-const section4 = document.querySelector('.section4');
-
-
 
 const checkbox = document.querySelector('#checkbox-toggle');
 
 navLogo.addEventListener('click', function(e) {
+    const section0 = document.querySelector('.background-image');
     e.preventDefault();
     section0.scrollIntoView();
     checkbox.checked = false;
 })
 
 link[0].addEventListener('click', function (e) {
+    const section1 = document.querySelector('.section1');
     e.preventDefault();
     section1.scrollIntoView();
     checkbox.checked = false;
 })
 
 link[1].addEventListener('click', function (e) {
+    const section2 = document.querySelector('.section2');
     e.preventDefault();
     section2.scrollIntoView();
     checkbox.checked = false;
 })
 
 link[2].addEventListener('click', function (e) {
+    const section3 = document.querySelector('.section3');
     e.preventDefault();
     section3.scrollIntoView(false);
     checkbox.checked = false;
 })
 
 link[3].addEventListener('click', function (e) {
+    const section4 = document.querySelector('.section4');
     e.preventDefault();
     section4.scrollIntoView();
     checkbox.checked = false;
@@ -61,9 +59,6 @@ function arrowDownFunc(e) {
     }
 }
 
-function showMenu(e) {
-    selectMenu.style.display = 'block'
-}
 
 selectMenu.addEventListener('click', arrowDownFunc);
 arrowDown.addEventListener('click', arrowDownFunc);
@@ -108,13 +103,13 @@ function showPrices(e) {
     }
 
     if (orderAmount.value.length > 0) {
-        const productCalc = document.querySelector('#order-calculation');
-        const finalCalc = document.querySelector('#order-calculation + .final-calculation');
+        const orderCalc = document.querySelector('#order-calculation');
+        const orderfinal = document.querySelector('#order-calculation + .final-calculation');
 
         let finalPrice = orderAmount.value * 0.25
 
-        productCalc.innerText = prodQuantity.value + ' * ' + '$0.25';
-        finalCalc.innerText = '$' + finalPrice;
+        orderCalc.innerText = orderAmount.value + ' * ' + '$0.25';
+        orderfinal.innerText = '$' + finalPrice;
 
         totalFinalPrice += finalPrice;
         totalPrice.innerText = '$' + totalFinalPrice;
